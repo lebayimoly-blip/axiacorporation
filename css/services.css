@@ -1,0 +1,173 @@
+/* ============================================
+   AXIA CORPORATION — services.css
+   ============================================ */
+
+/* ---- STICKY NAV ---- */
+.services-nav {
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 70px;
+  z-index: 900;
+  overflow-x: auto;
+}
+.snav-inner {
+  display: flex;
+  gap: 0;
+  padding: 0;
+  min-width: max-content;
+}
+.snav-item {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray);
+  transition: all var(--transition);
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+.snav-item:hover, .snav-item.active {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+/* ---- SERVICE SECTIONS ---- */
+.svc-section {
+  background: var(--white);
+  padding: 6rem 0;
+}
+.svc-section.alt {
+  background: var(--cream);
+}
+.svc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.svc-grid.reverse .svc-text { order: 2; }
+.svc-grid.reverse .svc-visual { order: 1; }
+
+.svc-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+.svc-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+.svc-text h2 em {
+  font-style: italic;
+  color: var(--red);
+}
+.svc-text p {
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+.svc-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+.svc-list li {
+  padding: 0.5rem 0 0.5rem 1.4rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.svc-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.pricing-tag {
+  display: inline-block;
+  background: var(--red-light);
+  color: var(--red-dark);
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.pricing-tag strong { font-weight: 700; }
+
+.pricing-block {
+  background: var(--light-gray);
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.price-item {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+.price-item strong {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* ---- SERVICE VISUAL ---- */
+.svc-visual {
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.svc-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08) 0%, transparent 60%);
+}
+.bg-dark { background: var(--dark); }
+.bg-red { background: var(--red); }
+.bg-green { background: #1B5E20; }
+.bg-warm { background: #4E342E; }
+.bg-purple { background: #4A148C; }
+.bg-charcoal { background: var(--charcoal); }
+
+.svc-emoji {
+  font-size: 5rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+}
+.svc-highlight {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .svc-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-grid.reverse .svc-text,
+  .svc-grid.reverse .svc-visual { order: unset; }
+  .svc-visual { aspect-ratio: 16/7; }
+}

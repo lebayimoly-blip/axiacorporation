@@ -1,0 +1,237 @@
+/* ============================================
+   AXIA CORPORATION — realisations.css
+   ============================================ */
+
+/* ---- KPI ---- */
+.kpi-section { background: var(--white); }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.kpi-card {
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
+}
+.kpi-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--red);
+}
+.kpi-card.kpi-accent {
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+}
+.kpi-icon { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+.kpi-n {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+.kpi-accent .kpi-n { color: var(--white); }
+.kpi-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+.kpi-accent h4 { color: var(--white); }
+.kpi-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.5; margin-bottom: 1rem; }
+.kpi-accent p { color: rgba(255,255,255,0.8); }
+.kpi-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--red);
+  border: 1.5px solid rgba(211,47,47,0.25);
+  padding: 0.25rem 0.65rem;
+  border-radius: 2px;
+}
+.kpi-tag.white {
+  color: rgba(255,255,255,0.9);
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* ---- CASE STUDIES ---- */
+.cases { background: var(--cream); }
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.case-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+.case-card:hover { transform: translateY(-4px); }
+.case-card.case-accent { background: var(--dark); }
+.case-accent h3 { color: var(--white); }
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.case-icon { font-size: 2rem; }
+.case-num {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.case-accent .case-num { color: var(--accent-gold); }
+.case-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+.case-block { margin-bottom: 1rem; }
+.case-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 0.3rem;
+}
+.case-accent .case-label { color: rgba(255,255,255,0.4); }
+.case-block p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; }
+.case-accent .case-block p { color: rgba(255,255,255,0.65); }
+
+.case-result {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.case-accent .case-result { border-top-color: rgba(255,255,255,0.1); }
+.result-n {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  white-space: nowrap;
+}
+.case-accent .result-n { color: var(--accent-gold); }
+.case-result p { font-size: 0.88rem; color: var(--gray); line-height: 1.5; }
+.case-accent .case-result p { color: rgba(255,255,255,0.6); }
+
+/* ---- UPCOMING PROJECTS ---- */
+.upcoming {
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+.upcoming::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 70%, rgba(211,47,47,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  position: relative;
+}
+.up-card {
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition), transform var(--transition);
+}
+.up-card:hover, .up-card.up-active {
+  border-color: rgba(211,47,47,0.5);
+  background: rgba(211,47,47,0.05);
+}
+.up-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+.up-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+.up-card p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 1rem; }
+.up-sector {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--red);
+  border: 1px solid rgba(211,47,47,0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+}
+.up-active .up-sector { color: var(--accent-gold); border-color: rgba(242,165,43,0.3); }
+
+/* ---- COMPETITIVE ADVANTAGES ---- */
+.competitive { background: var(--white); }
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.comp-card {
+  padding: 2rem;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.comp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.comp-card.comp-accent {
+  grid-column: span 2;
+  background: var(--red);
+}
+.comp-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+.comp-accent h4 { color: var(--white); }
+.comp-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
+.comp-accent p { color: rgba(255,255,255,0.85); }
+
+@media (max-width: 900px) {
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .cases-grid { grid-template-columns: 1fr; }
+  .upcoming-grid { grid-template-columns: 1fr 1fr; }
+  .comp-grid { grid-template-columns: 1fr 1fr; }
+  .comp-card.comp-accent { grid-column: span 2; }
+}
+@media (max-width: 600px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+  .upcoming-grid { grid-template-columns: 1fr; }
+  .comp-grid { grid-template-columns: 1fr; }
+  .comp-card.comp-accent { grid-column: span 1; }
+}

@@ -1,0 +1,171 @@
+/* ============================================
+   AXIA CORPORATION — contact.css
+   ============================================ */
+
+.contact-main { background: var(--cream); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ---- FORM ---- */
+.contact-form-wrap {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow);
+}
+.contact-form-wrap h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  letter-spacing: 0.02em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: 1.5px solid rgba(0,0,0,0.12);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--dark);
+  background: var(--white);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(211,47,47,0.08);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: #b0b0b0; }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-submit {
+  align-self: flex-start;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+}
+.form-note {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-top: -0.5rem;
+}
+.form-success {
+  background: #E8F5E9;
+  color: #2E7D32;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ---- CONTACT INFO ---- */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.info-block {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+.info-icon {
+  font-size: 1.6rem;
+  min-width: 2.5rem;
+  margin-top: 0.1rem;
+}
+.info-block h4 {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+.info-block p, .info-block a {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.7;
+  transition: color var(--transition);
+}
+.info-block a:hover { color: var(--red); }
+.ref {
+  font-size: 0.8rem !important;
+  color: rgba(0,0,0,0.4) !important;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* ---- QUICK SECTORS ---- */
+.quick-sectors {
+  background: var(--dark);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-top: 0.5rem;
+}
+.quick-sectors h4 {
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 1.2rem;
+}
+.qs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.qs-grid span {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  transition: border-color var(--transition), color var(--transition);
+  cursor: default;
+}
+.qs-grid span:hover {
+  border-color: rgba(211,47,47,0.5);
+  color: var(--white);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-form-wrap { padding: 2rem; }
+}
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
